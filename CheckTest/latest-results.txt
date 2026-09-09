@@ -1,0 +1,35 @@
+Check started: 2026-09-09T14:47:37.8626645+07:00
+PASS Enemy policy: Dead/removed target replaced by living reachable player
+PASS Enemy policy: Blocked low-HP target does not prevent acting on another player
+PASS Enemy policy: Attackable player preferred over walking toward old target
+PASS Enemy policy: Valid in-range intent is preserved
+PASS Enemy policy: Reachable locked target preserved if nobody is in range
+PASS Enemy policy: No intent/new enemy chooses reachable target
+PASS Enemy policy: All paths blocked returns no target for explicit wait reason
+PASS Enemy policy: No living players returns no target
+PASS Enemy policy: Shortest path selected without valid intent
+PASS Duplicate definitions and invalid effects rejected
+PASS Three-card initial draw, energy and per-copy identity
+PASS Consumed card cannot be replayed and foreign card cannot be used
+PASS Insufficient energy does not mutate piles
+PASS Unused cards retained and used cards recycled, including former exhaust cards
+PASS Damage report includes actual HP loss, block absorption and source
+PASS Supply occurs only after two complete rounds and never twice per round
+PASS Empty draw and discard terminate; seeded shuffle repeats
+PASS Pile conservation across 100 turns
+PASS Block absorbs hits, expires on own turn, healing clamps
+PASS Strength and Weak affect outgoing damage; Vulnerable incoming
+PASS Poison bypasses block, ticks exactly its duration
+PASS Status stacking adds potency and refreshes longest duration
+PASS Target validation rejects wrong team and out-of-range
+PASS All five effect kinds execute through shared combat rules
+PASS Progress validates versions, IDs, counts and copy isolation
+PASS Save round-trip, atomic replacement and corrupted-save rejection
+26 tests passed.
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.99
+Automated scope: core logic + Enemy target policy + C# compilation. Unity Play Mode is not exercised.

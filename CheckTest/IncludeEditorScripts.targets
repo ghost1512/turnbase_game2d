@@ -1,0 +1,16 @@
+<Project>
+  <Target Name="UseCurrentGameplayAssembly" BeforeTargets="ResolveProjectReferences">
+    <ItemGroup>
+      <ProjectReference Remove="@(ProjectReference)" />
+      <Reference Include="Assembly-CSharp">
+        <HintPath>$(MSBuildProjectDirectory)/Temp/bin/Debug/Assembly-CSharp.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+  </Target>
+  <Target Name="IncludeCurrentEditorScripts" BeforeTargets="CoreCompile">
+    <ItemGroup>
+      <Compile Remove="@(Compile)" />
+      <Compile Include="$(MSBuildProjectDirectory)/Assets/Editor/**/*.cs" />
+    </ItemGroup>
+  </Target>
+</Project>

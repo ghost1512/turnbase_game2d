@@ -1,0 +1,8 @@
+<Project>
+  <Target Name="IncludeAllGameplayScripts" BeforeTargets="CoreCompile">
+    <ItemGroup>
+      <Compile Remove="@(Compile)" />
+      <Compile Include="$(MSBuildProjectDirectory)/Assets/Scripts/**/*.cs" />
+    </ItemGroup>
+  </Target>
+</Project>
